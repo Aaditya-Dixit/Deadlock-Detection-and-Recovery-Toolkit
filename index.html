@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deadlock Toolkit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+<h3>Deadlock Detection and Recovery Toolkit</h3>
+
+<div>
+<button onclick="undo()">↶ Undo</button>
+<button onclick="redo()">↷ Redo</button>
+<button onclick="resetAll()">⟳ Reset</button>
+</div>
+</div>
+
+<div class="main">
+
+<div class="canvas-area">
+<canvas id="canvas"></canvas>
+<div id="stateBadge">Safe State</div>
+</div>
+
+<div class="sidebar">
+
+<h4>Add Process</h4>
+<input id="pid" placeholder="P1">
+<button onclick="addProcess()">Add</button>
+
+<h4>Add Resource</h4>
+<input id="rid" placeholder="R1">
+<input id="inst" type="number" placeholder="Instances">
+<button onclick="addResource()">Add</button>
+
+<h4>Assign / Request</h4>
+<select id="p"></select>
+<select id="r"></select>
+<button onclick="assign()">Assign</button>
+<button onclick="request()">Request</button>
+
+<h4>Recovery</h4>
+<select id="preemptSelect"></select>
+<button class="warn" onclick="preempt()">Preempt Selected Process</button>
+<select id="rollbackSelect"></select>
+<button class="warn" onclick="rollback()">Rollback Selected Process</button>
+<select id="killSelect"></select>
+<button class="danger" onclick="kill()">Kill Selected Process</button>
+
+<h4>Processes</h4>
+<table>
+<thead><tr><th>ID</th><th>Status</th></tr></thead>
+<tbody id="table"></tbody>
+</table>
+
+</div>
+</div>
+
+<div id="explain">Explanation: Start by adding processes.</div>
+<script src="script.js"></script>
+</body>
+</html>
