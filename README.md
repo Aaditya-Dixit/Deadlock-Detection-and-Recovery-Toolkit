@@ -1,2 +1,2 @@
 # Deadlock-Detection-and-Recovery-Toolkit
-The project effectively detects deadlock and uses methods to recover it under different scenarios.
+nteractive web-based simulation of deadlock detection and recovery in operating systems using Resource Allocation Graph (RAG) and Wait-For Graph (WFG), with real-time visualization and recovery techniques like preemption, rollback, and process termination.
